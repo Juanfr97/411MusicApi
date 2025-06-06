@@ -7,11 +7,7 @@ services:
     build:
       context: .
     environment:
-      DATABASE_HOST: db
-      DATABASE_PORT: 3306
-      DATABASE_USERNAME: vapor_username
-      DATABASE_PASSWORD: vapor_password
-      DATABASE_NAME: vapor_database
+      DATABASE_NAME: $DATABASE_NAME
     depends_on:
       - db
     ports:

@@ -12,8 +12,8 @@ final class Album : Model, @unchecked Sendable {
     
     static let schema = "albums"
     
-    @ID(key: .id)
-    var id : UUID?
+    @ID(custom: "id", generatedBy: .database)
+    var id: UUID?
     
     @Field(key:"title")
     var title : String
